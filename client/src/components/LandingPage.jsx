@@ -66,12 +66,8 @@ const LandingPage = (props) => {
                 setErrors({
                     ...errors,
                     register: err.response.data
-
                 })
-
-
             })
-
     }
 
     // handel onSubmit for login inputs
@@ -84,8 +80,6 @@ const LandingPage = (props) => {
                 props.setUserName(res.data.userFromDB.firstName)
                 navigate('/movies')
 
-
-
             })
             .catch(err => {
                 console.log("Error : ", err.response.data)
@@ -95,10 +89,8 @@ const LandingPage = (props) => {
 
                 })
                 console.log("Error : ", errors.login)
-
             }
             )
-
     }
 
     return (
@@ -134,7 +126,7 @@ const LandingPage = (props) => {
                             <label className="form-label">Role</label>
                                 <select id="lang" onChange={handleRegisterChange} value={register.role} className="form-control" name='role'>
                                     <option value="client">Client</option>
-                                    <option value="advocat">Advocat</option>
+                                    <option value="lawyer">Lawyer</option>
                                 </select> <br />
                             </div>
                             <button type='submit' className='btn btn-primary'>Register</button>
@@ -143,8 +135,6 @@ const LandingPage = (props) => {
                     </div>
                     <div className="col-3" ></div>
                     <div className="login col bg-light"  >
-
-
 
                         <h2> Login </h2>
                         <form onSubmit={handleLoginSubmit} >
