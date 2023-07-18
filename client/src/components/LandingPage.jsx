@@ -54,7 +54,8 @@ const LandingPage = (props) => {
                     lastName: '',
                     email: '',
                     password: '',
-                    confirmPassword: ''
+                    confirmPassword: '',
+                    role: ''
                 })
                 props.setUserName(res.data.user.firstName)
                 navigate('/movies')
@@ -127,6 +128,16 @@ const LandingPage = (props) => {
                             <div className="mb-3">
                                 <label className="form-label"     >Confirm Password</label>
                                 <input className="form-control" type='password' name='confirmPassword' value={register.confirmPassword} onChange={handleRegisterChange} />
+                            </div>
+                            <div className="mb-3">
+                            <label className="form-label">Role</label>
+                                <select id="lang" onChange={handleRegisterChange} className="form-control">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select> <br />
                             </div>
                             <button type='submit' className='btn btn-primary'>Register</button>
                         </form>
