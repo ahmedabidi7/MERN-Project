@@ -132,12 +132,9 @@ const LandingPage = (props) => {
                             </div>
                             <div className="mb-3">
                             <label className="form-label">Role</label>
-                                <select id="lang" onChange={handleRegisterChange} value={register.role} className="form-control">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                <select id="lang" onChange={handleRegisterChange} value={register.role} className="form-control" name='role'>
+                                    <option value="client">Client</option>
+                                    <option value="advocat">Advocat</option>
                                 </select> <br />
                             </div>
                             <button type='submit' className='btn btn-primary'>Register</button>
