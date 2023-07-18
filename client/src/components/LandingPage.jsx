@@ -56,7 +56,7 @@ const LandingPage = (props) => {
                     password: '',
                     confirmPassword: ''
                 })
-                props.setUserName(res.data.userFromDB.firstName)
+                props.setUserName(res.data.user.firstName)
                 navigate('/movies')
             })
             .catch(err => {
@@ -78,7 +78,7 @@ const LandingPage = (props) => {
         axios.post('http://localhost:8000/api/login', login,{withCredentials: true})
             .then(res => {
                 console.log("cookie", document.cookie)
-                console.log("user name : ", res.data.user.firstName)
+                console.log("user name : ", res.data.userFromDB.firstName)
                 props.setUserName(res.data.userFromDB.firstName)
                 navigate('/movies')
 

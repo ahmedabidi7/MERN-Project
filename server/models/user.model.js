@@ -26,6 +26,10 @@ const UserSchema = new mongoose.Schema({
     role: {
       type: String
       
+    },
+    credit: {
+      type: Number
+      
     }
   }, {timestamps: true});
   // add this after UserSchema is defined
