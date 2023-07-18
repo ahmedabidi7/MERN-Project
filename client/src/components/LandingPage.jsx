@@ -8,7 +8,8 @@ const LandingPage = (props) => {
         lastName: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        role: ''
     })
     const [login, setLogin] = useState({
         email: '',
