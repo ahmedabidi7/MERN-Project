@@ -8,6 +8,9 @@ const ServiceSchema = new mongoose.Schema({
     },
     name: { type: String,
         required: [true,"{PATH} is required"],
+    },
+    price: { type: Number,
+        required: [true,"{PATH} is required"],
     }
 }, { timestamps: true });
 module.exports.Service = mongoose.model('Service', ServiceSchema);
