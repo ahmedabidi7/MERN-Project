@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div> 
        <div className='d-flex justify-content-around m-2'>
-        <h1>Moldy Tomatoes</h1>
+        <h1>Estichara</h1>
         <button    className='btn btn-danger'   onClick={handleLogout}>Logout</button>
       </div>
      

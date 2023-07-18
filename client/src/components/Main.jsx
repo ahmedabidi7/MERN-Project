@@ -7,9 +7,8 @@ function Main() {
     const [movies, setMovies] = useState([]);
     const nav = useNavigate();
 
-
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/movies',{withCredentials: true})
+        axios.get('http://localhost:8000/api/services',{withCredentials: true})
             .then(res=>{
                 setMovies(res.data);
                 console.log(res.data);
@@ -18,7 +17,6 @@ function Main() {
                 if (err.response.status === 401)
                 {nav("/unautorized", {replace:true});}
             })
-        
     },[]);
 
     const calculateReviewsAverage = (reviews) => {
@@ -31,16 +29,16 @@ function Main() {
     return (
         <div>
             <div className='d-flex justify-content-around m-2'>
-            <h2>Movie List</h2>
+            <h2>Services list</h2>
             
-            <button onClick={(e)=>{nav("/movies/new")}} className='btn btn-primary'>Add a new Movie</button>
+            <button onClick={(e)=>{nav("/movies/new")}} className='btn btn-primary'>Add a new service</button>
             </div>
             
             <table className='table'>
                 <thead>
                     <tr>
-                        <th>Movie Title</th>
-                        <th>Avg. Rating</th>
+                        <th>Service Name</th>
+                        <th>Discription</th>
                         <th>Action</th>
                     </tr>
                 </thead>
