@@ -38,7 +38,7 @@ function Main() {
                 <thead>
                     <tr>
                         <th>Service Name</th>
-                        <th>Discription</th>
+                        <th>Description</th>
                         <th>Action</th>
                     </tr>
                 </thead>
