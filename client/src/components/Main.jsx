@@ -32,6 +32,7 @@ function Main() {
                     <tr>
                         <th>Lawyer Name</th>
                         <th>Description</th>
+                        <th>Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -39,10 +40,11 @@ function Main() {
                     {services.map( (service, i) =>
                     <tr>
                         <td>{service.name}</td>
-                        <td></td>
+                        <td>{service.description}</td>
+                        <td>{service.price}</td>
                         <td>
                             <button onClick={(e)=>{nav("/movies/"+service._id)}} className='btn btn-success'>View Service</button>
-                            <button onClick={(e)=>{nav("/movies/"+service._id+"/review")}} className='btn btn-warning'>Write a Review</button>
+                            {/* <button onClick={(e)=>{nav("/movies/"+service._id+"/review")}} className='btn btn-warning'>Write a Review</button> */}
                         </td>
                     </tr>
                     )}
