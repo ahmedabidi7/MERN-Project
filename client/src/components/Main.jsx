@@ -4,13 +4,13 @@ import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 
 function Main() {
-    const [movies, setMovies] = useState([]);
+    const [services, setServices] = useState([]);
     const nav = useNavigate();
 
     useEffect(()=>{
         axios.get('http://localhost:8000/api/services',{withCredentials: true})
             .then(res=>{
-                setMovies(res.data);
+                setServices(res.data);
                 console.log(res.data);
             })
             .catch((err) => {console.error(err);
@@ -18,13 +18,6 @@ function Main() {
                 {nav("/unautorized", {replace:true});}
             })
     },[]);
-
-    const calculateReviewsAverage = (reviews) => {
-        let average = reviews.reduce((acc,review) => {
-            return acc + review.rating / reviews.length;
-        },0);
-        return average > 0 ? average.toFixed(1) : 0;
-    }
 
     return (
         <div>
@@ -37,19 +30,19 @@ function Main() {
             <table className='table'>
                 <thead>
                     <tr>
-                        <th>Service Name</th>
+                        <th>Lawyer Name</th>
                         <th>Description</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {movies.map( (movie, i) =>
+                    {services.map( (service, i) =>
                     <tr>
-                        <td>{movie.title}</td>
-                        <td>{calculateReviewsAverage(movie.reviews)}</td>
+                        <td>{service.name}</td>
+                        <td></td>
                         <td>
-                            <button onClick={(e)=>{nav("/movies/"+movie._id)}} className='btn btn-success'>Read Reviews</button>
-                            <button onClick={(e)=>{nav("/movies/"+movie._id+"/review")}} className='btn btn-warning'>Write a Review</button>
+                            <button onClick={(e)=>{nav("/movies/"+service._id)}} className='btn btn-success'>View Service</button>
+                            <button onClick={(e)=>{nav("/movies/"+service._id+"/review")}} className='btn btn-warning'>Write a Review</button>
                         </td>
                     </tr>
                     )}
