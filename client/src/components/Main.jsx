@@ -42,7 +42,7 @@ function Main() {
                         <td>{service.description}</td>
                         <td>{service.price}</td>
                         <td>
-                            <a href='http://localhost:3001/'><button className='btn btn-success'>Pay for this service</button></a>
+                            <a href='http://localhost:8000/'><button className='btn btn-success'>Pay for this service</button></a>
                             {/* <button onClick={(e)=>{nav("/movies/"+service._id+"/review")}} className='btn btn-warning'>Write a Review</button> */}
                         </td>
                     </tr>
