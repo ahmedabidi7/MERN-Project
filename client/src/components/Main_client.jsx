@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 
-function Main() {
+function Main_client() {
+
     const [services, setServices] = useState([]);
     const nav = useNavigate();
 
@@ -18,12 +19,12 @@ function Main() {
             })
     },[]);
 
-    return (
-        <div>
+  return (
+    <div>
             <div className='d-flex justify-content-around m-2'>
             <h2>Services list</h2>
             
-            <button onClick={(e)=>{nav("/movies/new")}} className='btn btn-primary'>Add a new service</button>
+            <div></div>
             </div>
             
             <table className='table'>
@@ -53,4 +54,4 @@ function Main() {
   )
 }
 
-export default Main
+export default Main_client

@@ -25,7 +25,7 @@ const Home = () => {
         <h1>Estichara</h1>
         <button    className='btn btn-danger'   onClick={handleLogout}>Logout</button>
       </div>
-     
+        
         <Main/>
         
     </div>
