@@ -59,6 +59,7 @@ const LandingPage = (props) => {
                     role: ''
                 })
                 props.setUserName(res.data.user.firstName)
+                props.setUser(res.data.user)
                 navigate('/movies')
             })
             .catch(err => {
@@ -78,6 +79,7 @@ const LandingPage = (props) => {
                 console.log("cookie", document.cookie)
                 console.log("user name : ", res.data.userFromDB.firstName)
                 props.setUserName(res.data.userFromDB.firstName)
+                props.setUser(res.data.userFromDB)
                 navigate('/movies')
 
             })

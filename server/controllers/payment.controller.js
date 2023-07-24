@@ -20,11 +20,11 @@ exports.payment = async (req, res) => {
     const token = await createToken(req.body);
     if (token.error) {
         req.flash('danger', token.error)
-        return res.redirect('/');
+        return res.redirect('/pay');
     }
     if (!token.id) {
         req.flash('danger', 'Payment failed.');
-        return res.redirect('/');
+        return res.redirect('/pay');
     }
 
     const charge = await createCharge(token.id, 2000);
@@ -33,7 +33,7 @@ exports.payment = async (req, res) => {
     } else {
         req.flash('danger', 'Payment failed.');
     }
-    return res.redirect('/');
+    return res.redirect('/pay');
 }
 
 const createToken = async (cardData) => {

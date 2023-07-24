@@ -10,14 +10,15 @@ import { useState } from 'react';
 function App() {
 
   const [userName, setUserName] = useState("")
+  const [user, setUser] = useState(null)
 
   return (  
     
     <div className="App">
       
       <Routes>
-        <Route element={<LandingPage setUserName={setUserName}/>} path="/" />
-        <Route element={<Home />} path="/movies" />
+        <Route element={<LandingPage setUserName={setUserName} setUser={setUser}/>} path="/" />
+        <Route element={<Home user={user}/>} path="/movies" />
         <Route element={<ErrorPage />} path="/unautorized" />
 
         <Route element={<Add userName={userName}  />} path="/movies/new" />

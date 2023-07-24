@@ -47,7 +47,7 @@ app.use(session({
 app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter); 
+app.use('/pay', indexRouter); 
  
 app.use(function (req, res, next) {
     next(createError(404));

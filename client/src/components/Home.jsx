@@ -2,8 +2,9 @@ import React,{useState}from 'react'
 import axios, { Axios } from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Main from './Main'
+import Main_client from "./Main_client"
 
-const Home = () => {
+const Home = (props) => {
     const [user,setUser]=useState(null)
     const navigate = useNavigate()
 
@@ -17,7 +18,7 @@ const Home = () => {
         .catch(err=>console.log(err))
         
         navigate('/')
-
+        
     }
   return (
     <div> 
@@ -26,7 +27,8 @@ const Home = () => {
         <button    className='btn btn-danger'   onClick={handleLogout}>Logout</button>
       </div>
         
-        <Main/>
+        {(props.user.role==="lawyer") ? <Main/> :<Main_client/> }
+        
         
     </div>
 

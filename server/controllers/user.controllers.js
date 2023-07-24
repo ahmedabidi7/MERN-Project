@@ -6,7 +6,7 @@ module.exports = {
 
     register: (req, res) => {
         User.create(req.body)
-          .then(user => {const userToken = jwt.sign({id: user._id , name : user.firstName}, secret); // Access the secret key from environment variables
+          .then(user => {const userToken = jwt.sign({id: user._id , name : user.firstName, role : user.role }, secret); // Access the secret key from environment variables
 
               res.cookie("userToken", userToken).json({ msg: "success registration!", user: user });
               console.log(userToken)
@@ -24,7 +24,7 @@ module.exports = {
             {
                 const isPasswordValid = await bcrypt.compare(req.body.password, userFromDB.password)
                 if(isPasswordValid){
-                    const userToken= jwt.sign({id:userFromDB._id , name : userFromDB.firstName}, secret)
+                    const userToken= jwt.sign({id:userFromDB._id , name : userFromDB.firstName, role:userFromDB.role}, secret)
                     console.log("Login User Token: " + userToken,"-------------------");
                     res.status(201).cookie("userToken", userToken ,{ sameSite: "none", secure: true }).json({userFromDB, message:'Login succesful',userToken:userToken})
                 }
