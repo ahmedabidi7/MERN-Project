@@ -50,6 +50,28 @@ function Main_client() {
                     )}
                 </tbody>
             </table>
+            <div className='d-flex justify-content-around m-2'>
+            <h2>My Appointements:</h2>
+            
+            <div></div>
+            </div>
+            <table className='table'>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Link to Video Call</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {services.map( (service, i) =>
+                    service.appointments.map( (appointment,i)=>
+                        <tr>
+                            <td>{appointment.date}</td><td><button onClick={()=>window.open(`https://localhost:3003/r/${appointment.link}`)} className='btn btn-warning'>Start Video Call</button></td>
+                        </tr>
+                        )
+                    )}
+                </tbody>
+            </table>
         </div>
   )
 }
