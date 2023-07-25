@@ -35,7 +35,6 @@ exports.payment = async (req, res) => {
         req.flash('danger', 'Payment failed.');
     }
     return res.redirect('/pay');
-
 }
 
 const createToken = async (cardData) => {
