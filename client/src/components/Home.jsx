@@ -27,7 +27,7 @@ const Home = (props) => {
         <button    className='btn btn-danger'   onClick={handleLogout}>Logout</button>
       </div>
         
-        {(props.user.role==="lawyer") ? <Main name={props.userName}/> :<Main_client/> }
+        {(props.user.role==="lawyer") ? <Main name={props.userName}/> :<Main_client name={props.userName}/> }
         
         
     </div>

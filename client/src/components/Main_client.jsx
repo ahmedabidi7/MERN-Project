@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link,useNavigate } from 'react-router-dom';
 
-function Main_client() {
+function Main_client(props) {
 
     const [services, setServices] = useState([]);
     const nav = useNavigate();
@@ -65,9 +65,11 @@ function Main_client() {
                 <tbody>
                     {services.map( (service, i) =>
                     service.appointments.map( (appointment,i)=>
+                    (appointment.name===props.name) ? 
                         <tr>
                             <td>{appointment.date}</td><td><button onClick={()=>window.open(`https://localhost:3003/r/${appointment.link}`)} className='btn btn-warning'>Start Video Call</button></td>
                         </tr>
+                        : <></>
                         )
                     )}
                 </tbody>
