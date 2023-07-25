@@ -6,6 +6,7 @@ import ErrorPage from './components/ErrorPage';
 import Add from './components/Add';
 import Update from './components/Update';
 import View from './components/View';
+import Pay from './components/Pay';
 import { useState } from 'react';
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
         <Route element={<LandingPage setUserName={setUserName} setUser={setUser}/>} path="/" />
         <Route element={<Home user={user}/>} path="/movies" />
         <Route element={<ErrorPage />} path="/unautorized" />
+
+        <Route element={<Pay />} path="/pay" />
 
         <Route element={<Add userName={userName}  />} path="/movies/new" />
         <Route element={<Update userName={userName} />} path="/movies/:id/review"/>
