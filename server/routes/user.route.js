@@ -9,6 +9,7 @@ module.exports = (app) => {
 
     app.post('/api/service/new', ServiceController.create);
     app.get('/api/services', authenticate, ServiceController.getAll);
+    app.get('/api/services/:name',  ServiceController.getByName);
     app.get('/api/service/:id',  ServiceController.getOne);
     app.put('/api/service/update/:id', ServiceController.update);
     app.delete('/api/service/delete/:id', ServiceController.delete);

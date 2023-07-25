@@ -24,6 +24,12 @@ module.exports.getByType = (request, response) => {
         .catch(err => response.json(err))
 }
 
+module.exports.getByName = (request, response) => {
+    Service.find({name:request.params.name})
+        .then(object => response.json(object))
+        .catch(err => response.json(err))
+}
+
 module.exports.update = (request, response) => {
     Service.findOneAndUpdate({_id: request.params.id}, request.body, {new:true, runValidators: true})
         .then(updated => response.json(updated))

@@ -19,7 +19,7 @@ function App() {
       
       <Routes>
         <Route element={<LandingPage setUserName={setUserName} setUser={setUser}/>} path="/" />
-        <Route element={<Home user={user}/>} path="/movies" />
+        <Route element={<Home user={user} userName={userName}/>} path="/movies" />
         <Route element={<ErrorPage />} path="/unautorized" />
 
         <Route element={<Pay userName={userName}  />} path="/pay/:id" />

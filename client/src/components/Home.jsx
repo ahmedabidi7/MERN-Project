@@ -7,7 +7,7 @@ import Main_client from "./Main_client"
 const Home = (props) => {
     const [user,setUser]=useState(null)
     const navigate = useNavigate()
-
+    
     const handleLogout = () => {
         axios.post('http://localhost:8000/api/logout',{},{withCredentials:true})
         .then(res =>{
@@ -27,7 +27,7 @@ const Home = (props) => {
         <button    className='btn btn-danger'   onClick={handleLogout}>Logout</button>
       </div>
         
-        {(props.user.role==="lawyer") ? <Main/> :<Main_client/> }
+        {(props.user.role==="lawyer") ? <Main name={props.userName}/> :<Main_client/> }
         
         
     </div>
