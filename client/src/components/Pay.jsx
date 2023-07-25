@@ -9,6 +9,7 @@ function Pay(props) {
     const [name, setName] = useState(props.userName);
     const [date, setDate] = useState("");
     const [service, setService] = useState("");
+    const [link, setLink] = useState(Math.floor(Math.random() * (99999999 - 10000000 + 1)) + 10000000);
 
     const [errors, setErrors] = useState([]);
 
@@ -26,7 +27,7 @@ function Pay(props) {
             description:service.description,
             name:service.name,
             price:service.price,
-            appointments:[...service.appointments,{name,date}]
+            appointments:[...service.appointments,{name,date,link}]
         }
         axios.put('http://localhost:8000/api/service/update/' + id, updatedService ,{withCredentials: true})
             .then(res => {console.log(res);nav("/movies")})

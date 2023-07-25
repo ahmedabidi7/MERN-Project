@@ -7,6 +7,7 @@ import Add from './components/Add';
 import Update from './components/Update';
 import View from './components/View';
 import Pay from './components/Pay';
+import Video from './components/Video';
 import { useState } from 'react';
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route element={<ErrorPage />} path="/unautorized" />
 
         <Route element={<Pay userName={userName}  />} path="/pay/:id" />
+        <Route element={<Video />} path="/video/:link" />
 
         <Route element={<Add userName={userName}  />} path="/movies/new" />
         <Route element={<Update userName={userName} />} path="/movies/:id/review"/>

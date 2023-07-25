@@ -45,7 +45,7 @@ function Main(props) {
                         <table className='table'>
                             {service.appointments.map( (appointment,i)=>
                             <tr>
-                                <td>Date: {appointment.date}</td><td>Client Name: {appointment.name}</td><td>Link to Video Chat: {appointment.link}</td>
+                                <td>Date: {appointment.date}</td><td>Client Name: {appointment.name}</td><td><button onClick={()=>window.open(`https://localhost:3003/r/${appointment.link}`)} className='btn btn-warning'>Start Video Call</button></td>
                             </tr>
                             )}
                             </table>
