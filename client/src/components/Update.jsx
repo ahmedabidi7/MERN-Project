@@ -16,7 +16,7 @@ function Update(props) {
     const [errors, setErrors] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/movie/' + id ,{withCredentials: true})
+        axios.get('http://localhost:8000/api/service/' + id ,{withCredentials: true})
             .then(res => {
                 setTitle(res.data.title);
                 setMovie(res.data);

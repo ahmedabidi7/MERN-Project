@@ -22,7 +22,7 @@ function App() {
         <Route element={<Home user={user}/>} path="/movies" />
         <Route element={<ErrorPage />} path="/unautorized" />
 
-        <Route element={<Pay />} path="/pay" />
+        <Route element={<Pay userName={userName}  />} path="/pay/:id" />
 
         <Route element={<Add userName={userName}  />} path="/movies/new" />
         <Route element={<Update userName={userName} />} path="/movies/:id/review"/>

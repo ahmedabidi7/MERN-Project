@@ -26,8 +26,6 @@ exports.payment = async (req, res) => {
     if (!token.id) {
         req.flash('danger', 'Payment failed.');
         return res.redirect('/pay');
-
-
     }
 
     const charge = await createCharge(token.id, 2000);
@@ -36,7 +34,6 @@ exports.payment = async (req, res) => {
     } else {
         req.flash('danger', 'Payment failed.');
     }
-
     return res.redirect('/pay');
 
 }

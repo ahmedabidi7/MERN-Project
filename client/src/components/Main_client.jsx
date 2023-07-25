@@ -43,7 +43,7 @@ function Main_client() {
                         <td>{service.description}</td>
                         <td>{service.price}</td>
                         <td>
-                            <button onClick={(e)=>{nav("/pay")}} className='btn btn-success'>Pay for this service</button>
+                            <button onClick={(e)=>{nav("/pay/"+service._id)}} className='btn btn-success'>Add Appointment</button>
                             {/* <button onClick={(e)=>{nav("/movies/"+service._id+"/review")}} className='btn btn-warning'>Write a Review</button> */}
                         </td>
                     </tr>
