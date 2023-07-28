@@ -1,0 +1,130 @@
+.orders{
+    display: flex;
+}
+.d-flex{
+    display: flex;
+}
+.co1{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: auto;
+    margin-right: 40px;
+align-content: start;}
+.co2{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+}
+.card77 p{
+    margin:5px;
+}
+
+// .co1 {
+//     /* Add any additional styling for the container here */
+//   }
+  
+
+  
+//   .card77 {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: start;
+//     font-size: 16px;
+//   }
+  
+//   .card77 p {
+//     margin-bottom: 15px;
+//   }
+  
+//   .card77 p:first-child {
+//     font-weight: bold;
+//     margin-bottom: 5px;
+//   }
+
+
+//   .card77 {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: start;
+//     font-size: 16px;
+//     text-align: left;
+//   }
+  
+//   .card77 p {
+//     margin-bottom: 15px;
+//   }
+  
+//   .card77 p:first-child {
+//     font-weight: bold;
+//     margin-bottom: 5px;
+//   }
+  .co1 {
+    /* Add any additional styling for the container here */
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .card77 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+  
+  .left-side {
+    flex: 1;
+  }
+  
+  .right-side {
+    flex: 2;
+  }
+  
+  .card77 p {
+    margin-bottom: 10px;
+  }
+  
+  .card77 p strong {
+    margin-right: 5px;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .card77 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .card77 p {
+    margin-bottom: 15px;
+  }
+  
+  .card77 p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .card77 {
+    display: flex;
+   
+    justify-content: start;
+    font-size: 16px;
+    text-align: left;
+  }
+  .co2{
+    text-align: left;
+    padding-left: 100px;
+    padding-bottom: 40px;
+  }

@@ -1,0 +1,63 @@
+.add1 {
+  padding: 0px;
+}
+
+.gigs {
+  background-color: #fffefe;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.gigCard {
+  background-color:rgb(245, 239, 222);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 27px;
+}
+
+.cardInfo {
+  flex: 1;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: rgb(100, 78, 22);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(143, 128, 90);;
+}

@@ -1,0 +1,113 @@
+.add1 {
+    /* Add any additional styling for the container here */
+  }
+  
+  .explore-container {
+    padding: 20px;
+  }
+  
+  .explore-title {
+    color: rgb(100, 78, 22);
+    background-color: rgb(225, 216, 194);
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+    height: 150px;
+    padding-top: 70px;
+    align-items: center;
+    align-content:center ;
+    margin-bottom: 20px;
+  }
+  
+  .explore-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .explore-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  /* Category Card styles */
+  .category-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .category-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .category-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .add1 {
+    /* Add any additional styling for the container here */
+  }
+  
+  .explore-container {
+    padding: 20px;
+  }
+  
+  .explore-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .explore-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .explore-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .f1 {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .f1:hover {
+    transform: scale(1.03);
+  }
+  
+  .f1 h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:  rgb(100, 78, 22);
+    text-align: left;
+   
+
+  }
+  
+  .f1 span {
+    font-size: 16px;
+    color: #0e0e0e;
+    text-align: left;
+
+  }

@@ -39,10 +39,18 @@ module.exports = {
         res.clearCookie('userToken');
         res.json({ msg: "logout!" });
     },
-    getLoggedUser : async (req, res) =>{
+    // getLoggedUser : async (req, res) =>{
+    //     req.cookies.userToken
+    //     jwt.verify(req.cookies.userToken, secret)
+    //     res.json( {successMessage: "User loggedIn working..."} )
+    // }
+
+    getLoggedUser: async (req, res) => {
         req.cookies.userToken
-        jwt.verify(req.cookies.userToken, secret)
-        res.json( {successMessage: "User loggedIn working..."} )
+        const userId = jwt.verify(req.cookies.userToken, secret).id
+        console.log(jwt.verify(req.cookies.userToken, secret), "");
+        User.findById(userId).then((user) => res.json(user))
+        .catch((err) => res.status(400).json({ msg: 'user not found', err }))
     }
 
 }

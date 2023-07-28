@@ -1,0 +1,34 @@
+.footer-container {
+    background-color: white;
+    color: #000000;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin-top: 50px;
+  }
+  
+  .footer-logo img {
+    height: 140px; /* Adjust the height as needed */
+  }
+  
+  .footer-contact {
+    padding-bottom: 20px;
+    
+  }
+  
+  .footer-social-icons a {
+    color:rgb(100, 78, 22);
+    font-size: 38px;
+    margin-left: 10px;
+    text-decoration: none;
+    width: 20px;
+  }
+  
+  .footer-social-icons a:hover {
+    color: #2f3031; /* Change the color on hover as desired */
+  }
+  .footer-logo{
+    display:inline;
+  }
